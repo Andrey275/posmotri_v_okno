@@ -163,6 +163,7 @@ ol {
   font-size: 75px;
   line-height: 70.5px;
   text-transform: uppercase;
+  transform: translateY(20px);
 }
 
 .title .content__accent {
