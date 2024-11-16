@@ -47,6 +47,7 @@ ol {
   gap: 30px;
   margin: auto;
   inline-size: 1140px;
+  block-size: 534px;
 }
 
 .search-form {
@@ -142,14 +143,15 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 26px;
-  inline-size: 500px;
+  gap: 5px;
+  inline-size: 408px;
 }
 
 .content__list {
   position: relative;
   overflow-y: hidden;
-  max-block-size: 315px;
+  block-size: 315px;
+  max-inline-size: 399px;
 }
 
 .content__list-item {
@@ -163,7 +165,6 @@ ol {
   font-size: 75px;
   line-height: 70.5px;
   text-transform: uppercase;
-  transform: translateY(20px);
 }
 
 .title .content__accent {
@@ -206,8 +207,8 @@ ol {
 
 .content__video-card-thumbnail {
   object-fit: cover;
-  inline-size: 194px;
-  block-size: 103px;
+  inline-size: 204px;
+  block-size: 102px;
 }
 
 .content__video-card-description-container {
@@ -228,9 +229,15 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  border-right: 1px solid #FFF;
-  border-left: 1px solid #FFF;
+.search-form__textfield:focus-visible {
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
+}
+
+.search-form__textfield:has(:active) {
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  outline: none;
 }
 
 .search-form__label:has(input[type="checkbox"]:focus-visible) {
@@ -266,8 +273,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   text-decoration: underline;
 }
 
-.button,
-.search-form__submit-button {
+.button {
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   text-align: center;
@@ -275,19 +281,17 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   cursor: pointer;
 }
 
-.button:hover,
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
-.button:active,
-.search-form__submit-button:active {
+.button:active {
   background-color: #545050;
 }
 
-.button:focus-visible,
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
 }
 
 .content__card-link {
@@ -311,12 +315,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .content__card-link_current {
-  border: 1px solid #FFF;
+  background-color: #545050;
 }
 
 .content__list:focus-within,
 .content__list:hover {
   overflow-y: auto;
+  max-inline-size: 416px;
 }
 
 .visually-hidden {
