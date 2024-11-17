@@ -149,13 +149,16 @@ ol {
 
 .content__list {
   position: relative;
-  overflow-y: hidden;
+  overflow-y: scroll;
   block-size: 315px;
-  max-inline-size: 399px;
+  inline-size: 100%;
+  padding-top: 14px;
 }
 
 .content__list-item {
   margin-block-end: 20px;
+  inline-size: 100%;
+  box-sizing: border-box;
 }
 
 .title {
@@ -172,7 +175,7 @@ ol {
 }
 
 .content__list-item:not(:last-child) {
-  margin-block-end: 30px;
+  margin-block-end: 36px;
 }
 
 .content__card-link {
@@ -316,12 +319,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__card-link_current {
   background-color: #545050;
-}
-
-.content__list:focus-within,
-.content__list:hover {
-  overflow-y: auto;
-  max-inline-size: 416px;
 }
 
 .visually-hidden {
