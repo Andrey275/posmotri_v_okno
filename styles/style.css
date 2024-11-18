@@ -42,7 +42,7 @@ ol {
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
   gap: 30px;
   margin: auto;
@@ -144,20 +144,17 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
-  inline-size: 408px;
 }
 
 .content__list {
   position: relative;
   overflow-y: scroll;
   block-size: 315px;
-  inline-size: 100%;
   padding-top: 14px;
 }
 
 .content__list-item {
   margin-block-end: 20px;
-  inline-size: 100%;
   box-sizing: border-box;
 }
 
@@ -210,8 +207,8 @@ ol {
 
 .content__video-card-thumbnail {
   object-fit: cover;
-  inline-size: 204px;
   block-size: 102px;
+  flex: 1 1 0;
 }
 
 .content__video-card-description-container {
@@ -219,7 +216,7 @@ ol {
   flex-direction: column;
   justify-content: flex-start;
   padding: 2px 0 4px 2px;
-  inline-size: 200px;
+  flex: 1 1 0;
   block-size: 101px;
 }
 
